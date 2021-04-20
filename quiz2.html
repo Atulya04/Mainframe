@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<script>
+function handleClick()
+          {         
+        var amountCorrect = 0;          
+        for(var i = 1; i <= 45; i++) {
+          var radios = document.getElementsByName('group'+i);
+          for(var j = 0; j < radios.length; j++) {
+            var radio = radios[j];
+            if(radio.value == "correct" && radio.checked) {
+              amountCorrect++;
+            }
+          }
+         }
+         
+         if(amountCorrect==0){
+      alert("0/5 => meet admin")
+  }
+  else if(amountCorrect==1){
+      alert("1/5 => fair, will have to attend 20 marks test to reach your advanced level")
+  }
+  else if(amountCorrect==2){
+      alert("2/5 => very fair, will have to attend 15 marks test to reach your advanced level")
+  }
+  else if(amountCorrect==3){
+      alert("3/5 => better,  will have to attend 10 marks test to reach your advanced level")
+  }
+  else if(amountCorrect==4){
+      alert("4/5 => good, need to write  test again to reach your advanced level")
+  }
+  else if(amountCorrect==5){
+      alert("5/5 => very good, you are good to apply the advanced level")
+          }
+        }
+    
+</script>  
+</head>
+
+<body>
+    <form name="quiz" method="post" name="buttons" id="quiz" onsubmit="return false">
+
+        <li><div class="question">Which mountain is the tallest mountain in the world?</div></li>
+        <input id="answer" type="radio" name="group1" value="wrong">K2
+        <input id="answer" type="radio" name="group1" value="wrong">Kilamanjaro
+        <input id="answer" type="radio" name="group1" value="correct">Everest
+        <input id="answer" type="radio" name="group1" value="wrong">Mount Rushmore<hr>
+
+        <li><div class="question">How many sides does a hexagon have?</div></li>
+        <input id="answer" type="radio" name="group2" value="wrong">5
+        <input id="answer" type="radio" name="group2" value="correct">6
+        <input id="answer" type="radio" name="group2" value="wrong">8
+        <input id="answer" type="radio" name="group2" value="wrong">2<hr>
+
+        <li><div class="question">Which of these is the word for something related to the heart?</div></li>
+        <input id="answer" type="radio" name="group3" value="wrong">Neural
+        <input id="answer" type="radio" name="group3" value="wrong">Respiratory
+        <input id="answer" type="radio" name="group3" value="wrong">Cerebral
+        <input id="answer" type="radio" name="group3" value="correct">Cardiac<hr>
+
+        <li><div class="question">Which of these is the opposite of Above?</div></li>
+        <input id="answer" type="radio" name="group4" value="wrong">In front
+        <input id="answer" type="radio" name="group4" value="wrong">Under
+        <input id="answer" type="radio" name="group4" value="wrong">Inside
+        <input id="answer" type="radio" name="group4" value="correct">Below<hr>
+
+        <li><div class="question">What is 's' if 2s*(2+3s) = 66?</div></li>
+        <input id="answer" type="radio" name="group5" value="wrong">9
+        <input id="answer" type="radio" name="group5" value="wrong"> 6
+        <input id="answer" type="radio" name="group5" value="correct">3
+        <input id="answer" type="radio" name="group5" value="wrong">11<hr>
+        
+
+        <button class="submit" onclick="return handleClick();" type="submit">Submit</button>
+        
+        </form>
+</body>
+</html>

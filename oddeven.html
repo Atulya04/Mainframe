@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odd or even</title>
+
+</head>
+
+
+
+<body>
+<form id="f1">
+    Enter the value : <input type="text" id="pr"><br>
+   
+<br>
+<script>
+    function oddeven(){
+        pr=parseInt(f1.pr.value)
+        if(pr%2==0){
+            document.getElementById("res").innerHTML = "Even";
+            document.getElementById("res").style.color = "Green";
+            alert("The number is even")
+            document.getElementById('res').value="The number " +pr+" is even";
+        }
+        else{
+            document.getElementById("res").innerHTML = "Even";
+            document.getElementById("res").style.color = "Red";
+            alert("The number is odd")
+            document.getElementById('res').value="The number "+pr+" is odd";
+        }
+}
+</script>
+Result: <input type="text" id="res">
+<button type="button" onclick="oddeven()">Click </button>
+</form>
+</body>
+</html>

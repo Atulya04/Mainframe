@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<script>
+    x=0
+    y=0
+    function res(){
+        x=x+1 
+        y=y+1
+    }
+function count(){
+    y=y+1
+}
+
+function submit(){ 
+if(y=5){
+  if(x=0){
+      alert("0/5 => meet admin")
+  }
+  if(x=1){
+      alert("1/5 => fair, will have to attend 20 marks test to reach your advanced level")
+  }
+  if(x=2){
+      alert("2/5 => very fair, will have to attend 15 marks test to reach your advanced level")
+  }
+  if(x=3){
+      alert("3/5 => better,  will have to attend 10 marks test to reach your advanced level")
+  }
+  if(x=4){
+      alert("4/5 => good, need to write  test again to reach your advanced level")
+  }
+  if(x=5){
+      alert("5/5 => very good, you are good to apply the advanced level")
+  }
+}
+}
+</script>  
+</head>
+
+<body>
+ <h3>Which mountain is the tallest mountain in the world?</h3>   
+    <input type="radio" onclick="res()">Mount Everest</input>
+    <input type="radio" onclick="count()">Kilamanjaro</input>
+    <input type="radio" onclick="count()">Kedarnath</input>
+    <input type="radio" onclick="count()">Mount Rushmore</input>
+<br>
+<h3>How many sides does a hexagon have?</h3>   
+    <input type="radio" onclick="count()">3</input>
+    <input type="radio" onclick="count()">4</input>
+    <input type="radio" onclick="count()">5</input>
+    <input type="radio" onclick="res()">6</input>
+<br>
+<h3>Which of these is the word for something related to the heart?</h3>   
+    <input type="radio" onclick="res()">Cardiac</input>
+    <input type="radio" onclick="count()">Perenial</input>
+    <input type="radio" onclick="count()">Neuronic</input>
+    <input type="radio" onclick="count()">Oxypital</input>
+<br>
+<h3>Which of these is the opposite of Above?</h3>   
+    <input type="radio" onclick="count()">Under</input>
+    <input type="radio" onclick="count()" >Behind</input>
+    <input type="radio" onclick="res()">Below</input>
+    <input type="radio" onclick="count()">Towards</input>
+<br>
+<h3>What is 's' if 2s*(2+3s) = 66? </h3>   
+    <input type="radio" onclick="count()">11</input>
+    <input type="radio" onclick="count()">9</input>
+    <input type="radio" onclick="res()">3</input>
+    <input type="radio" onclick="count()">6</input>
+<br>
+<button type="button" onclick="submit()">Submit</button>
+  
+</body>
+</html>
